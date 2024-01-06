@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+}
+
+/* code anterior div  */
+#app > * {
+  border: 1px solid red;
+}
+
+#app {
+  /* não aceita margin top  */
+  /* display: inline-grid;  */
+  display: grid;
+  /* grid-template-columns: 100px 200px 300px;  */
+  /* separando cada coluna por igual  */
+  /* grid-template-columns: 1fr 3fr 1fr;  */
+  /* grid-template-columns: 1fr 1fr 1fr;  */
+  /* grid-template-columns: repeat(6, 1fr);  */
+  /* grid-template-columns: 1fr 200px 50% 30vw;  */
+  /* grid-template-rows: 200px 1fr 2fr 1fr;  */
+  /* grid-template-rows: 200px 1fr 2fr 50%;  */
+  /* grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 200px 100%; */
+  /* grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr); */
+  /* grid-template-areas: 
+  "A B B"
+  "A B B"
+  "A C D"; */
+
+  grid-template: 
+  "A B B" 80px
+  "A B B" 40px
+  "A C D" 50px / 80px 1fr 2fr;
+
+  /* grid-template-areas: 
+  "header header header"
+  "main main aside"
+  "footer footer footer"; */
+
+/* adicionar espaço entre todo o layout  */
+  gap: 20px; 
+  /* adicionar espaço somente nas linhas  */
+  /* row-gap: 30px;  */
+  /* adicionar espaço somente nas colunas  */
+  /* column-gap: 30px;  */
+ 
+  height: 100vh; 
+
+  padding: 30px;
+
+  /* somando o padding com a margem do layout  */
+  box-sizing: border-box;
+  /* border: 2px solid green;  */
+}
+
+/* span {
+  border: 1px solid blue;
+} */
+
+/* code anterior div:nth-child(1)  */
+#app header {
+  /* grid-column-start: 1;
+  grid-column-end: 4; */
+  /* grid-row-start: 1;
+  grid-row-end: 4; */
+  grid-area: A; 
+  /* grid-area: header;  */
+}
+
+/* code anterior div:nth-child(2)  */
+#app main {
+  /* grid-column: 1/3;  */
+  /* grid-column: 2/4;
+  grid-row: 1/3; */
+  grid-area: B; 
+  /* grid-area: main;  */
+}
+
+/* code anterior div:nth-child(4)  */
+#app footer {
+  /* grid-column: 1/4;  */
+  /* grid-area: footer;  */
+}
